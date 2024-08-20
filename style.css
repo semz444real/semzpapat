@@ -1,0 +1,122 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.inventory-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.inventory-panel {
+    width: 35%;
+    background-color: rgba(40, 40, 40, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.capacity-bar {
+    width: 100%;
+    height: 10px;
+    background-color: rgba(50, 50, 50, 0.9);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.capacity-fill {
+    height: 100%;
+    background-color: #00FFFF;
+    width: 50%; /* Example: 50% filled */
+    transition: width 0.3s ease;
+}
+
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    background-color: rgba(50, 50, 50, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.inventory-item {
+    background-color: rgba(60, 60, 60, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    height: 80px;
+    width: 80px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.inventory-item:hover {
+    transform: scale(1.05);
+    background-color: rgba(70, 70, 70, 0.9);
+}
+
+.inventory-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.inventory-item p {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.action-panel {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: rgba(45, 45, 45, 0.95);
+    border-radius: 15px;
+}
+
+.option-button {
+    background-color: #00FFFF;
+    color: #1e1e1e;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.option-button:hover {
+    background-color: #00e5e5;
+    box-shadow: 0px 8px 15px rgba(0, 255, 255, 0.4);
+}
